@@ -1,0 +1,30 @@
+<html>
+
+<head>
+<script type="text/javascript">
+function star()
+{
+ var i,j,num;
+ num=Number(document.getElementById("num").value);
+ for(i=1; i <= num; i++)
+ {
+  for(j=1; j<=i; j++)
+ {
+   
+   document.write('*');
+  }
+   document.write('<br />');
+  }
+}
+    
+</script>
+</head>
+<body>
+    <form>
+      Enter the number of stars in base of the traingle:&nbsp;&nbsp;<input type="text" id="num">
+        <br>
+        <br>
+        <input type="button" onclick="star()" value="Generate triangle pattern">
+    </form>
+</body>
+</html>

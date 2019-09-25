@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Google Sign Up</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <style>
+        .form-wrapper {
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            height: max-content;
+            width: max-content;
+            border: 1px solid #bfbfbf;
+            border-radius: 5px;
+            padding: 20px;
+            background: #FFF;
+            width: 720px;
+            height: 500px;
+            display: flex;
+        }
+
+        .left-side {
+            width: 60%;
+            padding: 30px 15px;
+        }
+
+        .name-input {
+            display: flex;
+        }
+
+        .w50 {
+            width: 50%;
+            margin: 15px 0;
+        }
+
+        .email-username-style {
+            border-right: none;
+        }
+
+        .email-style {
+            border: 1px solid #ced4da;
+            border-left: none;
+            background-color: #FFF;
+        }
+
+        .next-btn {
+            width: 80px;
+    float: right;
+        }
+
+        .right-side {
+            width: 40%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .img-text {
+            font-weight: 300;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-wrapper">
+        <div class="left-side">
+            <img src="images\google-logo.png" style="width: 80px">
+            <form>
+                <div class="first-pg" id="pg1">
+                    <h4 style="margin-top: 20px">Create Your Google Account</h4>
+                    <div class="name-input">
+                        <div class="form-group w50" style="margin-right: 15px;">
+                            <input type="text" class="form-control" id="firstname" placeholder="First Name">
+                        </div>
+                        <div class="form-group w50">
+                            <input type="text" class="form-control" id="lastname" placeholder="Last Name">
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" class="form-control email-username-style"
+                            placeholder="Username" aria-label="Username">
+                        <div class="input-group-append">
+                            <span class="input-group-text email-style">@gmail.com</span>
+                        </div>
+                    </div>
+                    <small class="form-text text-muted">You'll need to confirm that this email belongs to you.</small>
+                    <h6 class="text-primary" id="use-email" style="margin-top: 5px;" onclick="toggleEmail()">Use my current email address instead</h6>
+                    <div class="name-input">
+                        <div class="form-group w50" style="margin-right: 15px; margin-bottom: 0;" >
+                                <input type="password" class="form-control" id="password" placeholder="Password">
+                            </div>
+                            <div class="form-group w50" style="margin-bottom: 0">
+                                <input type="password" class="form-control" id="cpassword" placeholder="Confirm Password">
+                            </div>
+                        </div>
+                        <small class="form-text text-muted" style="margin-bottom: 36px;">Use 8 or more characters with a mix of letters, numbers & symbols</small>
+                        <button type="button" class="btn btn-light text-primary">Sign in instead</button>
+                    <button type="button" class="btn btn-primary next-btn" onclick="nextPg()">Next</button>
+                </div>
+            </form>
+        </div>
+        <div class="right-side">
+            <img src="images\account.svg" style="width: 100%">
+            <h5 class="img-text">One account. All of Google working for you.</h5>
+        </div>
+    </div>
+    <script>
+    function toggleEmail() {
+        const useEmail = document.getElementById('use-email');
+
+    }
+    </script>
+</body>
+
+</html>
